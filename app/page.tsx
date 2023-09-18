@@ -37,6 +37,7 @@ export default function Home() {
 
   return (
     <div className='container'>
+      <h1>Tic-Tac-Toe</h1>
       <div className='gameboard'>
         {
           cells.map(
