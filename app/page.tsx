@@ -12,10 +12,11 @@ export default function Home() {
       <div className='gameboard'>
         {
           cells.map(
-            (cell, index) => <Cell id={index} go={go} setGo={setGo} key={index} cells={cells} setCells={setCells}/>
+            (cell, index) => <Cell id={index} go={go} setGo={setGo} key={index} cells={cells} setCells={setCells} cell={cell}/>
           )
         }
       </div>
+      <div>{`Now its ${go} turn !`}</div>
     </div>
   )
 }
