@@ -6,9 +6,10 @@ type CellProps = {
   setGo: Dispatch<SetStateAction<string>>;
   cells: string[];
   setCells: Dispatch<SetStateAction<string[]>>;
+  cell: string;
 };
 
-const Cell = ({ go, setGo, id, cells, setCells }: CellProps) => {
+const Cell = ({ go, setGo, id, cells, setCells, cell }: CellProps) => {
   
   const handleClick = (e) => {
     const notTaken = !cells[id];
@@ -28,7 +29,9 @@ const Cell = ({ go, setGo, id, cells, setCells }: CellProps) => {
     setCells(copyCells);
   };
 
-  return <div className="square" onClick={handleClick}></div>;
+  return <div className="square" onClick={handleClick}>
+    <div className={cell}> {cell ? (cell === "O" ? "O" : "X") : ""}</div>
+  </div>;
 };
 
 export default Cell;
