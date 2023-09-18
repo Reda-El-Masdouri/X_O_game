@@ -44,8 +44,8 @@ export default function Home() {
           )
         }
       </div>
-      <div>{winningMessage}</div>
-      <div>{!winningMessage && `Now its ${go} turn !`}</div>
+      <div className='turnMessage'>{!winningMessage && `Now its ${go} turn !`}</div>
+      <div className='winningMessage'>{winningMessage}</div>
     </div>
   )
 }
